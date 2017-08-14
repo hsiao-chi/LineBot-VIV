@@ -5,8 +5,9 @@ $channelAccessToken = 'gHsZCt17+VcM/XoK8Bw2zrd+yKNIDH/RxlpWIsN5vpybMVwIqBKvykooJ
 $channelSecret = '3e004ec129a589b5feaf1c3d44c7315a';
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-echo client;
+echo $client;
 foreach ($client->parseEvents() as $event) {
+    
     $client->replyMessage(array(
         'replyToken' => $event['replyToken'],
         'messages' => array(
