@@ -6,8 +6,8 @@ $channelSecret = '3e004ec129a589b5feaf1c3d44c7315a';
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
-/*foreach ($client->parseEvents() as $event) {
-    
+foreach ($client->parseEvents() as $event) {
+    echo "arata";
     $client->replyMessage(array(
         'replyToken' => $event['replyToken'],
         'messages' => array(
@@ -17,5 +17,5 @@ $client = new LINEBotTiny($channelAccessToken, $channelSecret);
             )
         )
     ));
-};*/
+};
 ?>
