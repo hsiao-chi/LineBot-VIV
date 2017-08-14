@@ -1,5 +1,4 @@
 <?php
-echo "arata";
 if (!function_exists('hash_equals')) {
     defined('USE_MB_STRING') or define('USE_MB_STRING', function_exists('mb_strlen'));
 
@@ -34,15 +33,16 @@ class LINEBotTiny
     {
         $this->channelAccessToken = $channelAccessToken;
         $this->channelSecret = $channelSecret;
-        echo "aoi";
     }
 
     public function parseEvents()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            echo 405;
             http_response_code(405);
             error_log("Method not allowed");
             exit();
+            
         }
 
         $entityBody = file_get_contents('php://input');
