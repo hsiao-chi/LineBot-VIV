@@ -34,6 +34,7 @@ class LINEBotTiny
     {
         $this->channelAccessToken = $channelAccessToken;
         $this->channelSecret = $channelSecret;
+        echo "aoi";
     }
 
     public function parseEvents()
