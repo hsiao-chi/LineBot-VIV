@@ -1,7 +1,6 @@
 runtime: php55
 api_version: 1
-env_variables:
-  REQUEST_METHOD:'POST'
+
 handlers:
 - url: /.*
   script: index.php
